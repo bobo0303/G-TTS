@@ -39,15 +39,9 @@ See <https://gtts.readthedocs.io/> for documentation and examples.
 
 This project is *not* affiliated with Google or Google Cloud. Breaking upstream changes *can* occur without notice. This project is leveraging the undocumented [Google Translate](https://translate.google.com) speech functionality and is *different* from [Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech/).
 
-### Project
-
--   [Questions & community](https://github.com/pndurette/gTTS/discussions)
--   [Changelog](CHANGELOG.rst)
--   [Contributing](CONTRIBUTING.rst)
-
 ### Licence
 
-[The MIT License (MIT)](LICENSE) Copyright © 2014-2024 Pierre Nicolas Durette & [Contributors](https://github.com/pndurette/gTTS/graphs/contributors)
+[The MIT License (MIT)](LICENSE) Copyright © 2014-2024 Pierre Nicolas Durette
 
 
 ### reference
