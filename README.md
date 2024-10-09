@@ -48,3 +48,8 @@ This project is *not* affiliated with Google or Google Cloud. Breaking upstream 
 ### Licence
 
 [The MIT License (MIT)](LICENSE) Copyright © 2014-2024 Pierre Nicolas Durette & [Contributors](https://github.com/pndurette/gTTS/graphs/contributors)
+
+
+### reference
+
+[G-TTS](https://github.com/pndurette/gTTS)
