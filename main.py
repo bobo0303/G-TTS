@@ -34,6 +34,14 @@ def HelloWorld():
 class TextRequest(BaseModel):  
     text: str  
   
+# load the default model at startup  
+@app.on_event("startup")  
+async def remove_buffer_audio():
+    logger.info("#####################################################")  
+    delete_old_audio_files()
+    logger.info("#####################################################")  
+
+  
 # inference endpoint  
 @app.post("/to_speech")  
 def generate_audio(request: TextRequest):  
@@ -111,7 +119,7 @@ def shutdown_event():
     logger.info("Scheduled task has been stopped.")  
   
 if __name__ == "__main__":  
-    port = int(os.environ.get("PORT", 80))  
+    port = int(os.environ.get("PORT", 52002))  
     uvicorn.config.LOGGING_CONFIG["formatters"]["default"]["fmt"] = "%(asctime)s [%(name)s] %(levelprefix)s %(message)s"  
     uvicorn.config.LOGGING_CONFIG["formatters"]["access"]["fmt"] = '%(asctime)s [%(name)s] %(client_addr)s - "%(request_line)s" %(status_code)s'  
     uvicorn.run(app, log_level='info', host='0.0.0.0', port=port)  

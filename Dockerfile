@@ -2,8 +2,9 @@ FROM python:3.8.10-slim
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG TARGETARCH
-RUN apt-get update && apt-get install -y --no-install-recommends libgl1 libglib2.0-0 vim ffmpeg zip unzip htop screen tree && apt-get clean && rm -rf /var/lib/apt/lists
+RUN apt-get update && apt-get install -y --no-install-recommends libgl1 libglib2.0-0 vim ffmpeg zip unzip htop screen tree gcc g++ unixodbc-dev && apt-get clean && rm -rf /var/lib/apt/lists
 
+# 升級 pip  
 RUN pip install --upgrade pip
 
 # 將 requirements.txt 複製到 Docker 映像中  

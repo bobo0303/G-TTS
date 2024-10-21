@@ -3,7 +3,7 @@ import urllib.parse
 import re  
   
 # 設定要發送請求的 URL  
-url = "http://0.0.0.0/to_speech"  
+url = "http://0.0.0.0:52002/to_speech"  
   
 # 構建請求的 payload  
 payload = {  

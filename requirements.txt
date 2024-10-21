@@ -1,15 +1,6 @@
-# wjy3
-ruamel.yaml==0.17.21
-ruamel.yaml.clib==0.2.7
-APScheduler==3.9.1
-pyodbc==4.0.34
-pydantic==1.10.2
-SQLAlchemy
-python-multipart
-./whl/wjy3-1.7.1-py3-none-any.whl
-
 # https://github.com/pndurette/gTTS (GTTS)
 gTTS
+pytz
 
 # fastapi
 numpy==1.23.1
@@ -20,3 +11,4 @@ uvicorn>=0.21.1
 fastapi>=0.95.1
 starlette>=0.26.1
 schedule
+

@@ -1,6 +1,7 @@
 from gtts import gTTS
-import string
 import time
+import string
+import datetime
 
 def tts(text):
     """  
@@ -17,15 +18,19 @@ def tts(text):
     :rtype: str  
     """  
     
-    # text to audio
-    tts = gTTS(text)
+    # text to audio (https://gtts.readthedocs.io/en/latest/module.html)
+    tts = gTTS(text, lang="zh")
     
+    """
     # text norm
     text = text.translate(str.maketrans("", "", string.punctuation))
     text = text.lower()
+    if len(text) >= 20:
+        text = text[:20] + "... "
+    """
     
     # save file
-    saved_file_path = f'./audio/{text}.wav'
+    saved_file_path = f'./audio/{datetime.datetime.now()}.wav'
     tts.save(saved_file_path)
     
     return saved_file_path
@@ -34,7 +39,7 @@ def tts(text):
 if __name__ == "__main__":
     # 示例使用
     
-    text = "one tiger"
+    text = "123"
     
     start = time.time()
     audio_path = tts(text)
